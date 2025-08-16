@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    min-width: 1440px;
+    width: 100%;
+    height: 60px;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.icons {
+    display: flex;
+    gap: 2px;
+    margin-left: 44px;
+}
+
+.icons img {
+    width: 32px;
+    height: 32px;
+}
+
+.contact {
+    width: 251px;
+    height: 22px;
+    margin-right: 44px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: -3%;
+    text-align: right;
+    vertical-align: middle;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.contact a,
+.contact .phone {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Стили для уведомления */
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+}
+
+.notification.show {
+    display: block;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.notification.hide {
+    animation: slideOut 0.3s ease-in forwards;
+}
+
+/* Анимация появления (слайд сверху вниз) */
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+/* Анимация исчезновения (слайд обратно вверх) */
+@keyframes slideOut {
+    from {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, -20px);
+        opacity: 0;
+    }
+}
+
+/* Стили для второго блока */
+.header-second {
+    min-width: 1440px;
+    width: 100%;
+    height: 110px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.logo {
+    width: 322px;
+    height: 41.81px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.nav-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button img.arrow-down {
+    width: 13px;
+    height: 6px;
+    margin-left: 10px;
+}
+
+.nav-button:last-child {
+    margin-right: 0;
+}
+
+.search-button {
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+}
+
+.search-button img.search-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Стили для блока с фото */
+.image-block {
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    min-height: 450px;
+    object-fit: cover;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 218px;
+    left: 51px;
+    width: 620px;
+    height: 322px;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.arrow:active {
+    animation: clickPulse 0.2s ease forwards;
+}
+
+.arrow-img {
+    width: 16px;
+    height: 28px;
+    object-fit: contain;
+    animation: sway 1.5s infinite ease-in-out;
+}
+
+/* Анимация нажатия для круга */
+@keyframes clickPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Анимация качания для стрелки */
+@keyframes sway {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+.left-arrow {
+    top: 182px;
+    left: 13px;
+}
+
+.right-arrow {
+    top: 182px;
+    right: 13px;
+}
