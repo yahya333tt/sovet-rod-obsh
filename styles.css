@@ -1,3 +1,6 @@
+@import url(info.css);
+@import url(president.css);
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
