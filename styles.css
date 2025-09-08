@@ -1,46 +1,54 @@
-@import url(info.css);
-@import url(president.css);
+@import url(ourstyle.css);
+@import url(new-section.css);
+@import url(ourstyle.css);
+@import url(podvalstyle.css);
+@import url(karuselstyle.css);
 
-body {
+:root {
+    --slide-scale: 1;
+    --slide-height: 450px;
+    --slide-width: 1440px;
+    --text-scale: 1;
+    --arrow-scale: 1;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .header {
-    min-width: 1440px;
     width: 100%;
-    height: 60px;
+    padding: 14px 44px;
     background-color: #F8F8F8;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
 }
 
 .icons {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
     display: flex;
-    gap: 2px;
-    margin-left: 44px;
-}
-
-.icons img {
-    width: 32px;
-    height: 32px;
+    gap: 8px;
 }
 
 .contact {
-    width: 251px;
-    height: 22px;
-    margin-right: 44px;
-    font-family: 'Montserrat', sans-serif;
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
     font-weight: 400;
-    font-style: normal;
     font-size: 14px;
     line-height: 160%;
     letter-spacing: -3%;
     text-align: right;
     vertical-align: middle;
-    color: #000000;
+    color: rgba(0, 0, 0, 1);
     white-space: nowrap;
 }
 
@@ -49,7 +57,7 @@ body {
     text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 1px;
-    color: #000000;
+    color: rgba(0, 0, 0, 1);
     cursor: pointer;
 }
 
@@ -86,6 +94,7 @@ body {
         transform: translate(-50%, -20px);
         opacity: 0;
     }
+
     to {
         transform: translate(-50%, 0);
         opacity: 1;
@@ -98,72 +107,59 @@ body {
         transform: translate(-50%, 0);
         opacity: 1;
     }
+
     to {
         transform: translate(-50%, -20px);
         opacity: 0;
     }
 }
 
-/* Стили для второго блока */
 .header-second {
-    min-width: 1440px;
+    position: relative;
     width: 100%;
-    height: 110px;
-    background-color: #FFFFFF;
+    padding: 16px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
-}
-
-.logo-link {
-    display: block;
-    text-decoration: none;
-}
-
-.logo {
-    width: 322px;
-    height: 41.81px;
+    gap: 10px;
 }
 
 .nav-buttons {
     display: flex;
     align-items: center;
-    margin-left: 24px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .nav-button {
-    font-family: 'Montserrat', sans-serif;
+
     font-weight: 600;
-    font-style: normal;
     font-size: 14px;
     line-height: 100%;
     letter-spacing: -2%;
-    vertical-align: middle;
-    color: #000000;
+    color: rgba(47, 43, 54, 1);
     text-decoration: none;
-    margin-right: 20px;
     display: flex;
     align-items: center;
+    white-space: nowrap;
+    gap: 10px;
+    justify-content:space-between;
 }
 
-.nav-button img.arrow-down {
-    width: 13px;
-    height: 6px;
-    margin-left: 10px;
+.arrow-down {
+    width: 10px;
+    height: 22px;
 }
 
-.nav-button:last-child {
-    margin-right: 0;
-}
+ .nav-button img.arrow-down{
+    width: 12px;
+    height: 5px;
+ }
+
 
 .search-button {
     width: 18px;
     height: 18px;
-    margin-left: 20px;
 }
 
 .search-button img.search-icon {
@@ -171,83 +167,199 @@ body {
     height: 18px;
 }
 
-/* Стили для блока с фото */
-.image-block {
-    width: 100%;
-    min-height: 450px;
-    position: relative;
-    margin: 0 auto;
+
+
+/* Адаптивность для очень больших экранов */
+@media (min-width: 1440px) {
+    :root {
+        --slide-scale: 1.22;
+        --slide-height: 550px;
+        --slide-width: 1600px;
+        --text-scale: 1.22;
+        --arrow-scale: 1.16;
+    }
+
+    .icons img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .contact {
+        font-size: 16px;
+    }
+
+    .search-button img.search-icon {
+        width: 22px;
+        height: 22px;
+    }
+
 }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    min-height: 450px;
+/* Адаптивность для планшетов */
+@media (min-width: 768px) and (max-width: 1199px) {
+    :root {
+        --slide-scale: 0.78;
+        --slide-height: 350px;
+        --slide-width: 100%;
+        --text-scale: 0.78;
+        --arrow-scale: 0.81;
+    }
+
+    .icons img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 250px;
+        height: 32px;
+    }
+    
+    .nav-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nav-button {
+        font-size: 12px;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    .nav-button img.arrow-down {
+        width: 8px;
+        height: 3px;
+    }
+
+    .search-button {
+        width: 16px;
+        height: 16px;
+    }
+
+    .search-button img.search-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+
 }
 
-.main-image {
-    width: 100%;
-    height: auto;
-    min-height: 450px;
-    object-fit: cover;
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    :root {
+        --slide-scale: 0.56;
+        --slide-height: 250px;
+        --slide-width: 100%;
+        --text-scale: 0.56;
+        --arrow-scale: 0.58;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact {
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 26px;
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    .nav-buttons {
+        margin-left: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-button {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .nav-button img.arrow-down {
+        width: 6px;
+        height: 2px;
+        margin-left: 4px;
+    }
+
+    .search-button {
+        width: 18px;
+        height: 18px;
+        margin-top: 0;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .search-button img.search-icon {
+        width: 18px;
+        height: 18px;
+        position: relative;
+    }
+
+    
 }
 
-.overlay-image {
-    position: absolute;
-    top: 218px;
-    left: 51px;
-    width: 620px;
-    height: 322px;
-    object-fit: cover;
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 480px) {
+    :root {
+        --slide-scale: 0.44;
+        --slide-height: 200px;
+        --slide-width: 100%;
+        --text-scale: 0.44;
+        --arrow-scale: 0.47;
+    }
+
+
+    .header-second {
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icons img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .contact {
+        font-size: 9px;
+    }
+
+    .logo {
+        position: relative;
+        width: 100px;
+        height: 23px;
+    }
+
+    .nav-button {
+        font-size: 10px;
+        padding: 4px 2px;
+    }
+
+  
 }
 
-.arrow {
-    position: absolute;
-    width: 86px;
-    height: 86px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.arrow:active {
-    animation: clickPulse 0.2s ease forwards;
-}
-
-.arrow-img {
-    width: 16px;
-    height: 28px;
-    object-fit: contain;
-    animation: sway 1.5s infinite ease-in-out;
-}
-
-/* Анимация нажатия для круга */
-@keyframes clickPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-/* Анимация качания для стрелки */
-@keyframes sway {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    50% { transform: translateX(0); }
-    75% { transform: translateX(2px); }
-    100% { transform: translateX(0); }
-}
-
-.left-arrow {
-    top: 182px;
-    left: 13px;
-}
-
-.right-arrow {
-    top: 182px;
-    right: 13px;
+/* Адаптивность для ландшафтной ориентации на мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+    :root {
+        --slide-scale: 0.44;
+        --slide-height: 200px;
+        --slide-width: 100%;
+        --text-scale: 0.44;
+        --arrow-scale: 0.47;
+    }
 }

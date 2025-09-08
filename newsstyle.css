@@ -1,0 +1,333 @@
+p, .p1, .p2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.PN{
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+.ZAG{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+}
+.ZAG h1{
+    font-size: 48px;
+}
+.ZAG button,
+.Bloc-b button{
+    height: 42px;
+    width: auto;
+    max-width: 182px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 100px;
+    border: 2px solid #DC3E48;
+}
+.Bloc-b .p1,
+.ZAG p{
+    color: #DC3E48;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.NOV{
+    margin: 0 50px 0 50px;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 0;
+    margin-top: 52px;
+}
+.POD-NOV{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 235px;
+    margin-right: 50px;
+    border-radius: 16px;
+    height: 715px;
+    gap: 20px;
+    border: 2px solid #DC3E48;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(220, 62, 72, 0.1);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.POD-NOV:hover {
+    box-shadow: 0 6px 20px rgba(220, 62, 72, 0.2);
+    transform: translateY(-2px);
+}
+.POD-NOV p{
+    color: #DC3E48;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    line-height: 1.2;
+    text-align: center;
+}
+.IMG {
+    position: absolute;
+    width: 220px;
+    left: 15px;
+    top: 20px;
+    border-radius: 8px;
+    
+}
+.bloc{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 125px;
+    padding: 0 16px 0 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    
+}
+.bloc img{
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.bloc h1{
+    position: relative;
+    margin: 0;
+    width: 170px;
+    z-index: 1;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.Pod{
+    z-index: 1;
+    width: 171px;
+    height: 42px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    backdrop-filter: blur(3px);
+    border: 1px solid #FFFFFF;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.Pod:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+.bloc .p1{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Bloc-b .p2{
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+}
+
+.Bloc-b .p2.expanded{
+    max-width: none;
+    -webkit-line-clamp: unset;
+    display: block;
+}
+.KAR-NOV{
+    width: calc(100% - 285px); /* 235px (ширина POD-NOV) + 50px (gap) */
+    height: auto;
+    gap: 20px;
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    flex-shrink: 0;
+}
+
+.KAR-NOV::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.Bloc-b{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 332px;
+    height: auto;
+    flex-shrink: 0;
+}
+.Bloc-b img{
+    position: relative;
+    margin-bottom: 20px;
+}
+.Bloc-b p{
+    font-weight: 500;
+    font-size: 14px;
+}
+.Bloc-b h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.Bloc-b .p2{
+    font-size: 16px;
+    font-weight: 400;
+}
+.text{
+    position: relative;
+    height: auto;
+    min-height: 300px;
+}
+.Bloc-b button{
+    margin-top: 20px;
+}
+.INF_NO{
+    width: 332px;
+    height: 320px;
+    border-radius: 20px;
+    background-color: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.INF_NO img{
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
+.text_no{
+    text-align: center;
+    margin-top: 50px;
+}
+/* Адаптивность для экранов меньше 730px */
+@media (max-width: 730px) {
+    .NOV {
+        flex-direction: column;
+        margin: 0 20px 0 20px;
+        margin-top: 30px;
+    }
+    
+    .POD-NOV {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        height: auto;
+        min-height: 400px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+    
+    .POD-NOV p {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .POD-NOV .IMG {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 180px;
+        margin: 20px 0;
+    }
+    
+    .POD-NOV .bloc {
+        position: relative;
+        top: auto;
+        margin: 10px 0;
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+    }
+    
+    .KAR-NOV {
+        width: 100%;
+        order: 2;
+    }
+    
+    .ZAG {
+        margin: 0 20px 0 20px;
+    }
+    
+    .ZAG h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* Адаптивность для экранов меньше 440px */
+@media (max-width: 440px) {
+    .POD-NOV {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    .POD-NOV p {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    
+    .POD-NOV .IMG {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 160px;
+        margin: 15px 0;
+    }
+    
+    .bloc img{
+        width: 200px;
+    }
+    
+    .POD-NOV .bloc {
+        position: relative;
+        top: auto;
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,333 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1440 / 450;
+    object-fit: cover;
+    margin: 0;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.text-block1 {
+    position: absolute;
+    width: 42.75vw;
+    height: auto;
+    top: 18.4028vw;
+    left: 9.9028vw;
+    font-size: 2.54vw;
+    font-weight: 700;
+    line-height: 105%;
+    letter-spacing: -2%;
+    color: #FFFFFF;
+}
+
+.text-block2 {
+    position: absolute;
+    width: 31.4583vw;
+    height: auto;
+    top: 24.675vw;
+    left: 9.9028vw;
+    font-size: 0.9555vw;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -2%;
+    color: #FFFFFF;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5.9722vw;
+    height: 5.9722vw;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn img.arrow-icon {
+    width: 1.1111vw;
+    height: 1.9444vw;
+    stroke: #DC3E48;
+}
+
+.prev-btn {
+    left: 0.9028vw;
+}
+
+.next-btn {
+    right: 0.9028vw;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 3.1181vw;
+    right: 10.8688vw;
+    display: flex;
+    justify-content: space-between;
+    width: 7.1299vw;
+    height: 0.8389vw;
+    align-items: center;
+}
+
+.dot {
+    width: 0.6993vw;
+    height: 0.6993vw;
+    border-radius: 50%;
+    background-color: rgba(238, 144, 152, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    width: 0.8389vw;
+    height: 0.8389vw;
+    background-color: #DC3E48;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+        padding: 0;
+    }
+    .carousel-slides {
+        width: 100%;
+    }
+    .carousel-slide img {
+        width: 100%;
+        margin: 0;
+    }
+    .text-block1 {
+        font-size: clamp(10px, 2.475vw, 24px);
+        width: 80%;
+        top: 134px;
+        left: 12%;
+    }
+    .text-block2 {
+        font-size: clamp(4px, 1.0833vw, 12px);
+        width: 80%;
+        top: 178px;
+        left: 12%;
+    }
+    .carousel-btn {
+        width: 48px;
+        height: 48px;
+    }
+    .carousel-btn img.arrow-icon {
+        width: 12px;
+        height: 20px;
+    }
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+    .dot.active {
+        width: 8px;
+        height: 8px;
+    }
+    .dots-container {
+        width: 48px;
+        bottom: 20px;
+        right: 10%;
+    }
+    .prev-btn {
+        left: 10px;
+    }
+    .next-btn {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-container {
+        width: 100%;
+        padding: 0;
+    }
+    .carousel-slides {
+        width: 100%;
+    }
+    .carousel-slide img {
+        width: 100%;
+        margin: 0;
+    }
+    .text-block1 {
+        font-size: clamp(7px, 2.1667vw, 18px);
+        width: 90%;
+        top: 71px;
+        left: 13%;
+    }
+    .text-block2 {
+        font-size: clamp(2px, 0.9833vw, 10px);
+        width: 90%;
+        top: 92px;
+        left: 13%;
+    }
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+    }
+    .carousel-btn img.arrow-icon {
+        width: 10px;
+        height: 16px;
+    }
+    .dots-container {
+        width: 36px;
+        bottom: 15px;
+        right: 5%;
+    }
+    .dot {
+        width: 4px;
+        height: 4px;
+    }
+    .dot.active {
+        width: 6px;
+        height: 6px;
+    }
+    .prev-btn {
+        left: 5px;
+    }
+    .next-btn {
+        right: 5px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .carousel-container {
+        width: 100%;
+    }
+    .carousel-slides {
+        width: 100%;
+    }
+    .carousel-slide img {
+        width: 100%;
+        height: auto;
+    }
+    .text-block1 {
+        font-size: 48px !important;
+        width: 820px !important;
+        top: 353px !important;
+        left: 189px !important;
+    }
+    .text-block2 {
+        font-size: 18px !important;
+        width: 604px !important;
+        top: 473px !important;
+        left: 189px !important;
+    }
+    .carousel-btn {
+        width: 114px !important;
+        height: 114px !important;
+    }
+    .carousel-btn img.arrow-icon {
+        width: 21px !important;
+        height: 37px !important;
+    }
+    .dot {
+        width: 13px !important;
+        height: 13px !important;
+    }
+    .dot.active {
+        width: 16px !important;
+        height: 16px !important;
+    }
+    .dots-container {
+        width: 137px !important;
+        bottom: 60px !important;
+        right: 209px !important;
+    }
+    .prev-btn {
+        left: 17px !important;
+    }
+    .next-btn {
+        right: 17px !important;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .carousel-container {
+        width: 100%;
+    }
+    .carousel-slides {
+        width: 100%;
+    }
+    .carousel-slide img {
+        width: 100%;
+        height: auto;
+    }
+    .text-block1 {
+        font-size: 64px !important;
+        width: 1094px !important;
+        top: 470px !important;
+        left: 252px !important;
+    }
+    .text-block2 {
+        font-size: 24px !important;
+        width: 805px !important;
+        top: 630px !important;
+        left: 252px !important;
+    }
+    .carousel-btn {
+        width: 152px !important;
+        height: 152px !important;
+    }
+    .carousel-btn img.arrow-icon {
+        width: 28px !important;
+        height: 49px !important;
+    }
+    .dot {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    .dot.active {
+        width: 21px !important;
+        height: 21px !important;
+    }
+    .dots-container {
+        width: 183px !important;
+        bottom: 80px !important;
+        right: 278px !important;
+    }
+    .prev-btn {
+        left: 23px !important;
+    }
+    .next-btn {
+        right: 23px !important;
+    }
+}
